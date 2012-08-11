@@ -1,1 +1,8 @@
-Download the ZIP to get started with Ember.js: <https://github.com/emberjs/starter-kit/downloads>
+
+
+=======
+chaosember
+==========
+
+An experiment graphing a non-linear system in emberjs and canvas, with a tiny bit of jquery ui
+
