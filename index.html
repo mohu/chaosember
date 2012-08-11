@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]--> <!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]--> <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]--> <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css?v=2">
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.22.custom.css" rel="stylesheet" />
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <script type="text/x-handlebars">
+    {{#view App.Canvas class="canvas-container"}}
+      <canvas id="can" width="1000" height="500"></canvas>
+    {{/view}}
+
+    {{#view App.Controls class="control"}}
+      <br>
+      <span class="label">r:</span> {{view Ember.TextField valueBinding="App.env.r"}} 0 to 4
+      <br>
+      <div id="rslider"></div>
+      <br>
+      <span class="label">x:</span> {{view Ember.TextField valueBinding="App.env.x"}} 0 to 1
+      <br>
+      <div id="xslider"></div>
+      <br>
+      <a href="#" {{action redraw}}>render</a>
+      <a href="#" {{action clear}}>clear</a>
+    {{/view}}
+
+  </script>
+
+  <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="js/libs/jquery-ui-1.8.22.custom.min.js"></script>
+  <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
+  <script src="js/libs/ember-1.0.pre.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
