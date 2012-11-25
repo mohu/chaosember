@@ -74,6 +74,7 @@ App.Controls = Em.View.extend({
         App.pointController.refresh();
       }
     });
+    App.pointController.refresh();
   },
   redraw : function(){
     App.pointController.refresh();
